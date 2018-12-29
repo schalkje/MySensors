@@ -1,3 +1,17 @@
+### FORK CHANGES 
+Change to support Alpine for hass.io (hassio):
+
+Add to __/drivers/spidev.cpp__
+````cpp
+#include <asm/ioctl.h>
+````
+to solve the problem: error: 
+````
+'_IOC_SIZEBITS' was not declared in this scope
+````
+
+-----------------------------------------------------------------
+
 MySensors Library v2.3.2-alpha
 
 Please visit www.mysensors.org for more information
