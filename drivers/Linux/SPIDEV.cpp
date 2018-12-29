@@ -25,6 +25,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <sys/ioctl.h>
+#include <asm/ioctl.h> // added for support of Alpine in docker; for hassio addon
 #include <unistd.h>
 #include "log.h"
 
