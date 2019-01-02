@@ -146,6 +146,10 @@ bool reconnectMQTT(void)
 		_MQTT_client.subscribe(MY_MQTT_SUBSCRIBE_TOPIC_PREFIX "/+/+/+/+/+");
 		return true;
 	}
+	// add delay to avoid exessive logging; based on comment in 
+	//    https://forum.mysensors.org/topic/9953/mqtt-gateway-floods-logfile-if-broker-is-not-reachable/2
+	// not the best location, but a quick fix
+	delay(3000);
 	return false;
 }
 
